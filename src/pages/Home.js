@@ -344,8 +344,6 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
-                        {/* END */}
-                        {/* Pricing Table*/}
                         <div className="col-lg-4 mb-5 mb-lg-0">
                             <div className="bg-white p-10 rounded-lg shadow">
                                 <h1 className="h6 text-uppercase font-weight-bold mb-4">
@@ -392,8 +390,6 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
-                        {/* END */}
-                        {/* Pricing Table*/}
                         <div className="col-lg-4">
                             <div className="bg-white p-10 rounded-lg shadow">
                                 <h1 className="h6 text-uppercase font-weight-bold mb-4">
@@ -440,13 +436,9 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
-                        {/* END */}
                     </div>
                 </div>
             </section>
-
-            {/* Team section */}
-            {/* Review section */}
             <section className="review-section spad">
                 <div className="container">
                     <div className="row">
@@ -456,7 +448,17 @@ const Home = () => {
                                 alt="quote"
                                 className="quote mb-5"
                             />
-                            <div className="review-text-slider owl-carousel">
+                            <OwlCarousel
+                                className="review-text-slider"
+                                loop
+                                margin={20}
+                                items={1}
+                                dots={false}
+                                nav
+                                autoplay
+                                animateOut="fadeOutDown"
+                                animateIn="fadeInDown"
+                            >
                                 <div className="review-text">
                                     <p>
                                         "Alertya is exciting because it shows
@@ -487,55 +489,61 @@ const Home = () => {
                                         can get pretty inconvenient.”
                                     </p>
                                 </div>
-                            </div>
+                            </OwlCarousel>
                         </div>
                         <div className="col-lg-4 pr-0 pull-3">
-                            <div className="review-meta-slider owl-carousel pt-5">
-                                <OwlCarousel
-                                    className="owl-theme"
-                                    loop
-                                    margin={10}
-                                    items={1}
-                                    nav
-                                >
-                                    <div className="author-meta">
-                                        <div
-                                            className="author-avatar set-bg"
-                                            data-setbg="img/review/1.jpg"
-                                        />
-                                        <div className="author-name">
-                                            <h4>Aaron Ballance</h4>
-                                            <p>Ceo Alertya</p>
-                                        </div>
+                            <OwlCarousel
+                                className="review-meta-slider pt-5"
+                                loop
+                                items={3}
+                                nav
+                                dots
+                                margin={20}
+                                center={true}
+                                autoplay
+                            >
+                                <div className="author-meta">
+                                    <div
+                                        className="author-avatar set-bg"
+                                        style={{
+                                            backgroundImage: `url(${"img/review/1.jpg"})`,
+                                        }}
+                                    ></div>
+                                    <div className="author-name">
+                                        <h4>Aaron Ballance</h4>
+                                        <p>Ceo Alertya</p>
                                     </div>
-                                    <div className="author-meta">
-                                        <div
-                                            className="author-avatar set-bg"
-                                            data-setbg="img/review/2.jpg"
-                                        />
-                                        <div className="author-name">
-                                            <h4>Jackson Nash</h4>
-                                            <p>Head of Design</p>
-                                        </div>
+                                </div>
+                                <div className="author-meta">
+                                    <div
+                                        className="author-avatar set-bg"
+                                        style={{
+                                            backgroundImage: `url(${"img/review/2.jpg"})`,
+                                        }}
+                                    ></div>
+                                    <div className="author-name">
+                                        <h4>Jackson Nash</h4>
+                                        <p>Head of Design</p>
                                     </div>
-                                    <div className="author-meta">
-                                        <div
-                                            className="author-avatar set-bg"
-                                            data-setbg="img/review/3.jpg"
-                                        />
-                                        <div className="author-name">
-                                            <h4>Katy Abrams</h4>
-                                            <p>Product Manager</p>
-                                        </div>
+                                </div>
+                                <div className="author-meta">
+                                    <div
+                                        className="author-avatar set-bg"
+                                        style={{
+                                            backgroundImage: `url(${"img/review/3.jpg"})`,
+                                        }}
+                                    ></div>
+                                    <div className="author-name">
+                                        <h4>Katy Abrams</h4>
+                                        <p>Product Manager</p>
                                     </div>
-                                </OwlCarousel>
-                            </div>
+                                </div>
+                            </OwlCarousel>
                         </div>
                     </div>
                 </div>
             </section>
-            {/* Review section end */}
-            {/* Newsletter section */}
+
             <section className="newsletter-section gradient-bg">
                 <div className="container text-white">
                     <div className="row">
