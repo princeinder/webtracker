@@ -1,1 +1,1 @@
-export const environment = "http://depinakin.com/webtracker";
+export const environment = "https://depinakin.com/webtracker";
